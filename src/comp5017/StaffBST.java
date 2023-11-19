@@ -6,7 +6,7 @@ package comp5017;// or whatever
  * template for use of students by D Lightfoot 2023-11
  */
 
-public class StaffDBTree implements IStaffDB{
+public class StaffBST implements IStaffDB{
 
     private class Node {
         Employee data;
@@ -16,7 +16,7 @@ public class StaffDBTree implements IStaffDB{
     private Node root; // this is the tree
     private int numEntries;
 
-    public StaffDBTree() {
+    public StaffBST() {
         System.out.println("Binary Search Tree");
         clearDB();
     }

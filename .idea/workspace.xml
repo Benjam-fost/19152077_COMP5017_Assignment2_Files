@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cornwall.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017/IEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017/IStaffDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017/StaffDBTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/COMP50172023CV2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/INetworkUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/IStationInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/ListInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/QueueInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/SetInt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp50172023v2/StackInt.java" afterDir="false" />
+    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Initial Files">
+      <change afterPath="$PROJECT_DIR$/src/comp5017/StaffBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/StaffDBTree.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +72,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700415105038</updated>
-      <workItem from="1700415106187" duration="1714000" />
+      <workItem from="1700415106187" duration="3024000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Files">
+      <created>1700417010232</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700417010232</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,16 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Initial Files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Files" />
   </component>
 </project>
