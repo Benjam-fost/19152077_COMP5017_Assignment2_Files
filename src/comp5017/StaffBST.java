@@ -1,5 +1,7 @@
 package comp5017;// or whatever
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ben Foster (19152077)
@@ -41,7 +43,7 @@ public class StaffBST implements IStaffDB{
     public boolean containsName(String name){ return get(name) != null; }
 
     private Employee retrieve (Node tree, String name) {
-        // to do
+
         return null; // not really
     }
     /**
@@ -53,7 +55,7 @@ public class StaffBST implements IStaffDB{
      */
     @Override
     public Employee get(String name){
-        // assert statements here
+        assert name != null && !name.isBlank();
         return retrieve(root, name);
     }
 
@@ -90,6 +92,7 @@ public class StaffBST implements IStaffDB{
      */
     @Override
     public Employee put(Employee member){
+        assert member != null;
         Employee returned;
         returned = null; // for now
         root = insert(root, member);
@@ -110,6 +113,8 @@ public class StaffBST implements IStaffDB{
        Hanspeter Mössenböck Springer-Verlag 1993, page 78
        transcribed into Java by David Lightfoot
     */
+        ArrayList<String> list = new ArrayList<String>();
+        list.add(root.data.getName());
         Node parent = null, del, p = null, q = null;
         Employee result;
         del = root;
@@ -119,30 +124,56 @@ public class StaffBST implements IStaffDB{
                 del = del.left;
             else
                 del = del.right;
+            list.add(del.data.getName());
         }// del == null || del.data.getName().equals(name))
         if(del != null) { // del.data.getName().equals(name)
             // find the pointer p to the node to replace del
-            if (del.right == null) p = del.left;
+            if (del.right == null) {
+                p = del.left;
+                list.add(p.data.getName());
+            }
             else if (del.right.left == null) {
                 p = del.right; p.left = del.left;
+                list.add(p.data.getName()); list.add(p.left.data.getName());
             } else {
                 p = del.right;
-                while (p.left != null) {q = p; p = p.left;}
+                list.add(p.data.getName());
+                while (p.left != null) {
+                    q = p; p = p.left;
+                    list.add(q.data.getName()); list.add(p.data.getName());
+                }
                 q.left = p.right; p.left = del.left; p.right = del.right;
+                list.add(q.left.data.getName()); list.add(p.left.data.getName()); list.add(p.right.data.getName());
             }
-            if(del == root) root = p;
-            else if (del.data.getName().compareTo(parent.data.getName()) < 0)
+
+            assert parent != null;
+            if(del == root) {root = p; list.add(root.data.getName());}
+            else if (del.data.getName().compareTo(parent.data.getName()) < 0) {
                 parent.left = p;
-            else parent.right = p;
+                list.add(parent.left.data.getName());
+            }
+            else {parent.right = p; list.add(parent.right.data.getName());}
+
             numEntries--;
-            result = del.data;
+            result = del.data; list.add(del.data.getName());
+            System.out.println("Employee deleted: " + result.getName());
+            System.out.print("Sequence of Nodes visited:\n[");
+            for (String i : list) {
+                System.out.print(i + ", ");
+            }
+            System.out.println("]");
         }
         else result = null;
+        System.out.println();
         return result;
     } // delete
 
     private void traverse(Node tree) {
-        // to do
+        if (tree != null) {
+            traverse(tree.left);
+            System.out.println(tree.data);
+            traverse(tree.right);
+        }
     }
 
     /**
@@ -151,8 +182,6 @@ public class StaffBST implements IStaffDB{
      * @pre true
      */
     @Override
-    public void displayDB(){
-        traverse(root);
-    }
+    public void displayDB(){traverse(root);}
 }
 
