@@ -1,4 +1,5 @@
-package comp5017;
+package comp5017_CW2;
+
 public class Employee implements IEmployee {
     private final String name;
     private final String affiliation;

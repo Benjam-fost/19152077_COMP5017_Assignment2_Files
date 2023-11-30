@@ -1,4 +1,4 @@
-package comp5017;// or whatever
+package comp5017_CW2;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * template for use of students by D Lightfoot 2023-11
  */
 
-public class StaffBST implements IStaffDB{
+public class StaffBST implements IStaffDB {
 
     private class Node {
         Employee data;
@@ -17,6 +17,7 @@ public class StaffBST implements IStaffDB{
     }
     private Node root; // this is the tree
     private int numEntries;
+    ArrayList<String> list;
 
     public StaffBST() {
         System.out.println("Binary Search Tree");
@@ -31,6 +32,7 @@ public class StaffBST implements IStaffDB{
     public void clearDB() {
         root = null; // garbage collector will tidy up
         numEntries = 0;
+        list = new ArrayList<>();
     }
 
     /**
@@ -43,9 +45,31 @@ public class StaffBST implements IStaffDB{
     public boolean containsName(String name){ return get(name) != null; }
 
     private Employee retrieve (Node tree, String name) {
-
-        return null; // not really
+        if (tree != null) {
+            list.add(tree.data.getName());
+            if (!name.equals(tree.data.getName())) {
+                if (name.compareTo(tree.data.getName()) < 0) {
+                    retrieve(tree.left, name);
+                } else {
+                    retrieve(tree.right, name);
+                }
+            }
+            else return tree.data;
+        }
+        return null;
     }
+    /*
+    Node ptr = tree;
+    while (ptr != null && !ptr.data.getName().equals(name)) {
+            if (name.compareTo(ptr.data.getName()) < 0)
+                ptr = ptr.left;
+            else
+                ptr = ptr.right;
+            list.add(ptr.data.getName());
+        if (ptr != null) {
+
+            }
+     */
     /**
      * Returns an Employee object mapped to the supplied name.
      * @pre name not null and not empty string or all blanks
@@ -56,7 +80,10 @@ public class StaffBST implements IStaffDB{
     @Override
     public Employee get(String name){
         assert name != null && !name.isBlank();
-        return retrieve(root, name);
+        Employee gotten = retrieve(root, name);
+        System.out.print("---Get---");
+        showLog(list);
+        return gotten;
     }
 
     /**
@@ -76,8 +103,21 @@ public class StaffBST implements IStaffDB{
     public boolean isEmpty() { return size() == 0; }
 
     private Node insert(Node tree, Employee employee) {
-        // to do
-        return null; // not really
+        String key = employee.getName();
+        if (tree == null) {
+            tree = new Node(employee);
+        } else if (key.compareTo(tree.data.getName()) > 0) {
+            list.add(tree.data.getName());
+            tree.right = insert(tree.right,employee);
+        } else if (key.compareTo(tree.data.getName()) < 0) {
+            list.add(tree.data.getName());
+            tree.left = insert(tree.left, employee);
+        } else {
+            numEntries--;
+            list.add(tree.data.getName());
+            return new Node(employee); //overwrites duplicate with no increase to numEntries.
+        }
+        return tree;
     }
 
     /**
@@ -92,11 +132,13 @@ public class StaffBST implements IStaffDB{
      */
     @Override
     public Employee put(Employee member){
-        assert member != null;
-        Employee returned;
-        returned = null; // for now
+        assert member != null && !member.getName().isBlank();
+        Employee previous = get(member.getName());
         root = insert(root, member);
-        return returned;
+        numEntries++;
+        System.out.print("---Put---");
+        showLog(list);
+        return previous;
     }
 
     /**
@@ -108,72 +150,78 @@ public class StaffBST implements IStaffDB{
      * the name does not exist.
      */
     @Override
-    public  Employee remove(String name){
+    public Employee remove(String name){
     /* based on Object-Oriented Programming in Oberon-2
        Hanspeter Mössenböck Springer-Verlag 1993, page 78
        transcribed into Java by David Lightfoot
     */
-        ArrayList<String> list = new ArrayList<String>();
-        list.add(root.data.getName());
+        assert name != null && !name.isBlank();
+        ArrayList<String> list = new ArrayList<>();
         Node parent = null, del, p = null, q = null;
         Employee result;
         del = root;
+
         while (del != null && !del.data.getName().equals(name)) {
-            parent = del;
-            if (name.compareTo(del.data.getName()) < 0)
-                del = del.left;
-            else
-                del = del.right;
             list.add(del.data.getName());
+            parent = del;
+            if (name.compareTo(del.data.getName()) < 0) {
+                del = del.left;
+            }
+            else {
+                del = del.right;
+            }
         }// del == null || del.data.getName().equals(name))
         if(del != null) { // del.data.getName().equals(name)
             // find the pointer p to the node to replace del
             if (del.right == null) {
                 p = del.left;
-                list.add(p.data.getName());
             }
             else if (del.right.left == null) {
                 p = del.right; p.left = del.left;
-                list.add(p.data.getName()); list.add(p.left.data.getName());
             } else {
                 p = del.right;
-                list.add(p.data.getName());
                 while (p.left != null) {
                     q = p; p = p.left;
-                    list.add(q.data.getName()); list.add(p.data.getName());
                 }
                 q.left = p.right; p.left = del.left; p.right = del.right;
-                list.add(q.left.data.getName()); list.add(p.left.data.getName()); list.add(p.right.data.getName());
             }
 
             assert parent != null;
-            if(del == root) {root = p; list.add(root.data.getName());}
+            if(del == root) {root = p;}
             else if (del.data.getName().compareTo(parent.data.getName()) < 0) {
                 parent.left = p;
-                list.add(parent.left.data.getName());
             }
-            else {parent.right = p; list.add(parent.right.data.getName());}
+            else {parent.right = p;}
 
             numEntries--;
             result = del.data; list.add(del.data.getName());
             System.out.println("Employee deleted: " + result.getName());
-            System.out.print("Sequence of Nodes visited:\n[");
-            for (String i : list) {
-                System.out.print(i + ", ");
-            }
-            System.out.println("]");
         }
         else result = null;
-        System.out.println();
+        System.out.print("---Remove---");
+        showLog(list);
         return result;
     } // delete
-
+    private void showLog(ArrayList<String> list) {
+        System.out.print("\nSequence of Nodes visited:\n[");
+        if (list.isEmpty()) {
+            System.out.print("None");
+        }
+        else {
+            for (String i : list) {
+                System.out.print("(" + i + ") ");
+            }
+        }
+        System.out.println("]\n");
+        list.clear();
+    }
     private void traverse(Node tree) {
         if (tree != null) {
             traverse(tree.left);
-            System.out.println(tree.data);
+            System.out.println("\n" + tree.data);
             traverse(tree.right);
         }
+        else System.out.println("The tree is empty");
     }
 
     /**

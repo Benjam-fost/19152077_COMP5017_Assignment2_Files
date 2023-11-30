@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Initial Files V2">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Part A finished with testing functionality">
+      <change afterPath="$PROJECT_DIR$/.idea/_19152077_COMP5017_Assignment2_Files.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sampleMembersUK.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017/StaffBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017/StaffBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/IEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/IEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/IStaffDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/IStaffDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017/StaffBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/COMP50172023CV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/INetworkUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/IStationInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/ListInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/Network.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/QueueInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/SetInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/StackInt.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +39,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2YP6wMBzoUCjdOrmsXaWMc2nt9e" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -32,23 +50,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/Ben9H/IdeaProjects/_19152077_COMP5017_Assignment2_Files/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Ben9H/IdeaProjects/_19152077_COMP5017_Assignment2_Files/src/comp5017_CW2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ben9H/IdeaProjects/19152077_COMP5017_Assignment2_Files&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Ben9H/IdeaProjects/_19152077_COMP5017_Assignment2_Files/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ben9H\IdeaProjects\_19152077_COMP5017_Assignment2_Files\src" />
+      <recent name="C:\Users\Ben9H\IdeaProjects\_19152077_COMP5017_Assignment2_Files\src\comp50172023v2" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="comp5017" />
       <recent name="" />
@@ -56,7 +87,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="comp50172023v2.COMP50172023CV2" />
+      <option name="MAIN_CLASS_NAME" value="comp5017_CW2.main" />
       <module name="_19152077_COMP5017_Assignment2_Files" />
       <option name="PROGRAM_PARAMETERS" value="-ea" />
       <method v="2">
@@ -73,6 +104,10 @@
       <option name="presentableId" value="Default" />
       <updated>1700415105038</updated>
       <workItem from="1700415106187" duration="19125000" />
+      <workItem from="1701116396657" duration="234000" />
+      <workItem from="1701117553139" duration="607000" />
+      <workItem from="1701118223369" duration="6155000" />
+      <workItem from="1701274092211" duration="13677000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Files">
       <created>1700417010232</created>
@@ -109,6 +144,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Files" />
     <MESSAGE value="Initial Files V2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Files V2" />
+    <MESSAGE value="Part A finished with testing functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part A finished with testing functionality" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/comp5017_CW2/main.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,11 +1,10 @@
-package comp5017; // or whatever
+package comp5017_CW2;
 
 /**
  *
  * @author D Lightfoot 2023-09
  * DO NOT CHANGE THIS INTERFACE
  * You must create a class that implements this interface
- *
  * an objects of a class implementing this interface holds information
  * about an employee
  */
@@ -27,6 +26,6 @@ public interface IEmployee {
     @Override
     /**
      * @return the employee's name and affiliation as string
-     */
+     **/
     public String toString();
 }

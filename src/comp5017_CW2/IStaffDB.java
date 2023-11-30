@@ -1,4 +1,4 @@
-package comp5017; //or whatever
+package comp5017_CW2;//or whatever
 
 /**
  *
