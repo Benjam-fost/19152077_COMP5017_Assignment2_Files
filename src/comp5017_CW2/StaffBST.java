@@ -159,7 +159,6 @@ public class StaffBST implements IStaffDB {
        transcribed into Java by David Lightfoot
     */
         assert name != null && !name.isBlank();
-        ArrayList<String> list = new ArrayList<>();
         Node parent = null, del, p = null, q = null;
         Employee result;
         del = root;

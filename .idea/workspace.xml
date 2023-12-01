@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Part A finished with testing functionality">
+    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" afterDir="false" />
     </list>
@@ -92,7 +92,7 @@
       <workItem from="1701117553139" duration="607000" />
       <workItem from="1701118223369" duration="6155000" />
       <workItem from="1701274092211" duration="14303000" />
-      <workItem from="1701462149634" duration="4405000" />
+      <workItem from="1701462149634" duration="4930000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Files">
       <created>1700417010232</created>
@@ -116,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701312959759</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null.">
+      <option name="closed" value="true" />
+      <created>1701466666526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701466666526</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +146,8 @@
     <MESSAGE value="Initial Files" />
     <MESSAGE value="Initial Files V2" />
     <MESSAGE value="Part A finished with testing functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Part A finished with testing functionality" />
+    <MESSAGE value="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null." />
+    <option name="LAST_COMMIT_MESSAGE" value="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
