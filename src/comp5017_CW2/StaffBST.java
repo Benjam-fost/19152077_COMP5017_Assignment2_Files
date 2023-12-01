@@ -13,8 +13,14 @@ public class StaffBST implements IStaffDB {
     private class Node {
         Employee data;
         Node left, right;
-        private Node(Employee m) { data = m; left = null; right = null; }
+
+        private Node(Employee m) {
+            data = m;
+            left = null;
+            right = null;
+        }
     }
+
     private Node root; // this is the tree
     private int numEntries;
     ArrayList<String> list;
@@ -26,6 +32,7 @@ public class StaffBST implements IStaffDB {
 
     /**
      * Empties the database.
+     *
      * @pre true
      */
     @Override
@@ -37,39 +44,35 @@ public class StaffBST implements IStaffDB {
 
     /**
      * Determines whether a member's name exists as a key inside the database
-     * @pre name is not null and not empty string or all blanks
+     *
      * @param name the member name (key) to locate
      * @return true iff the name exists as a key in the database
+     * @pre name is not null and not empty string or all blanks
      */
     @Override
-    public boolean containsName(String name){ return get(name) != null; }
-
-    private Employee retrieve (Node tree, String name) {
-        if (tree != null) {
-            list.add(tree.data.getName());
-            if (!name.equals(tree.data.getName())) {
-                if (name.compareTo(tree.data.getName()) < 0) {
-                    retrieve(tree.left, name);
-                } else {
-                    retrieve(tree.right, name);
-                }
-            }
-            else return tree.data;
-        }
-        return null;
+    public boolean containsName(String name) {
+        return get(name) != null;
     }
-    /*
-    Node ptr = tree;
-    while (ptr != null && !ptr.data.getName().equals(name)) {
-            if (name.compareTo(ptr.data.getName()) < 0)
-                ptr = ptr.left;
-            else
-                ptr = ptr.right;
-            list.add(ptr.data.getName());
-        if (ptr != null) {
 
-            }
-     */
+    private Employee retrieve(Node tree, String name) {
+        assert name != null && !name.isBlank();
+        Employee result;
+
+        if (tree == null) {
+            result = null;
+        } else if (name.compareTo(tree.data.getName()) > 0) {
+            list.add(tree.data.getName());
+            result = retrieve(tree.right, name);
+        } else if (name.compareTo(tree.data.getName()) < 0){
+            list.add(tree.data.getName());
+            result=  retrieve(tree.left, name);
+        } else {
+            result = tree.data;
+            list.add(result.getName());
+        }
+        return result;
+    }
+
     /**
      * Returns an Employee object mapped to the supplied name.
      * @pre name not null and not empty string or all blanks
@@ -221,15 +224,18 @@ public class StaffBST implements IStaffDB {
             System.out.println("\n" + tree.data);
             traverse(tree.right);
         }
-        else System.out.println("The tree is empty");
     }
-
     /**
      * Prints the names and affiliations of all the members in the database in
      * alphabetic order.
      * @pre true
      */
     @Override
-    public void displayDB(){traverse(root);}
+    public void displayDB(){
+        if (root == null) {
+            System.out.println("The tree is empty");
+        }
+        else traverse(root);
+    }
 }
 

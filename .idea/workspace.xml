@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Part A finished with testing functionality">
-      <change afterPath="$PROJECT_DIR$/.idea/_19152077_COMP5017_Assignment2_Files.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sampleMembersUK.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017/IEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/IEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017/IStaffDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/IStaffDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017/StaffBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/COMP50172023CV2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/INetworkUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/IStationInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/ListInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/Network.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/QueueInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/SetInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp50172023v2/StackInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +91,8 @@
       <workItem from="1701116396657" duration="234000" />
       <workItem from="1701117553139" duration="607000" />
       <workItem from="1701118223369" duration="6155000" />
-      <workItem from="1701274092211" duration="13677000" />
+      <workItem from="1701274092211" duration="14303000" />
+      <workItem from="1701462149634" duration="4405000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Files">
       <created>1700417010232</created>
@@ -123,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700418206070</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Part A finished with testing functionality">
+      <option name="closed" value="true" />
+      <created>1701312959759</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701312959759</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,10 +143,14 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/comp5017_CW2/main.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="3" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/comp5017_CW2/IStaffDB.java</url>
+          <line>27</line>
+          <properties class="comp5017_CW2.IStaffDB" method="containsName">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
