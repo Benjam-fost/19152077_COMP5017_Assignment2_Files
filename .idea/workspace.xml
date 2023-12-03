@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null.">
+    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="V4 Part A finished with testing functionality&#10;Added testing file.">
+      <change afterPath="$PROJECT_DIR$/src/RandomNamesEmails.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/IStationInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/Network.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/StationInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/StaffBST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/Ben9H/IdeaProjects/_19152077_COMP5017_Assignment2_Files/src/comp5017_CW2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ben9H/IdeaProjects/19152077_COMP5017_Assignment2_Files&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ben9H/IdeaProjects/_19152077_COMP5017_Assignment2_Files/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -57,7 +60,11 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ben9H\IdeaProjects\_19152077_COMP5017_Assignment2_Files\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ben9H\IdeaProjects\_19152077_COMP5017_Assignment2_Files\src\comp5017_CW2" />
       <recent name="C:\Users\Ben9H\IdeaProjects\_19152077_COMP5017_Assignment2_Files\src" />
       <recent name="C:\Users\Ben9H\IdeaProjects\_19152077_COMP5017_Assignment2_Files\src\comp50172023v2" />
     </key>
@@ -92,7 +99,8 @@
       <workItem from="1701117553139" duration="607000" />
       <workItem from="1701118223369" duration="6155000" />
       <workItem from="1701274092211" duration="14303000" />
-      <workItem from="1701462149634" duration="4930000" />
+      <workItem from="1701462149634" duration="9692000" />
+      <workItem from="1701614539095" duration="5517000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Files">
       <created>1700417010232</created>
@@ -124,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701466666526</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="V3 Part A finished with testing functionality&#10;Deleted unneeded local variable in remove()">
+      <option name="closed" value="true" />
+      <created>1701467183958</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701467183958</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +163,8 @@
     <MESSAGE value="Initial Files V2" />
     <MESSAGE value="Part A finished with testing functionality" />
     <MESSAGE value="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null." />
-    <option name="LAST_COMMIT_MESSAGE" value="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null." />
+    <MESSAGE value="V3 Part A finished with testing functionality&#10;Deleted unneeded local variable in remove()" />
+    <option name="LAST_COMMIT_MESSAGE" value="V3 Part A finished with testing functionality&#10;Deleted unneeded local variable in remove()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
