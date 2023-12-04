@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="V4 Part A finished with testing functionality&#10;Added testing file.">
-      <change afterPath="$PROJECT_DIR$/src/RandomNamesEmails.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/IStationInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/StationInfo.java" afterDir="false" />
+    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Part B started&#10;Implemented IStationInfo, StationInfo and Network">
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/INetworkUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/ListInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/NetworkUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/QueueInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/SetInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/StackInt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +102,7 @@
       <workItem from="1701118223369" duration="6155000" />
       <workItem from="1701274092211" duration="14303000" />
       <workItem from="1701462149634" duration="9692000" />
-      <workItem from="1701614539095" duration="5517000" />
+      <workItem from="1701614539095" duration="23267000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Files">
       <created>1700417010232</created>
@@ -140,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701467183958</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Part B started&#10;Implemented IStationInfo, StationInfo and Network">
+      <option name="closed" value="true" />
+      <created>1701623618049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701623618049</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +174,8 @@
     <MESSAGE value="Part A finished with testing functionality" />
     <MESSAGE value="V2 Part A finished with testing functionality&#10;Fixed bug in retrieve() always returning null." />
     <MESSAGE value="V3 Part A finished with testing functionality&#10;Deleted unneeded local variable in remove()" />
-    <option name="LAST_COMMIT_MESSAGE" value="V3 Part A finished with testing functionality&#10;Deleted unneeded local variable in remove()" />
+    <MESSAGE value="Part B started&#10;Implemented IStationInfo, StationInfo and Network" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part B started&#10;Implemented IStationInfo, StationInfo and Network" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
