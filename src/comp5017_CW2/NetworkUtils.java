@@ -80,6 +80,7 @@ public class NetworkUtils implements INetworkUtils{
         SetInt closed = new SetInt(size);
         SetInt open = new SetInt(size);
         ListInt ls = new ListInt(size);
+        int whileCount = 0;
 
         for (int i = 0; i < size; i++) {
             open.include(i);
@@ -87,6 +88,7 @@ public class NetworkUtils implements INetworkUtils{
         }
         nodes[startIndex].g = 0;
         while (!closed.contains(endIndex)) {
+            whileCount++;
             int index = -1;
             double x = network.NO_LINK;
             int count = -1;
@@ -126,7 +128,7 @@ public class NetworkUtils implements INetworkUtils{
         for (int k = j; k >= 0; k--) {
             ls.append(list[k]);
         }
-
+        System.out.println("While loop iterations: " + whileCount);
         return ls;
     }
 
@@ -155,6 +157,7 @@ public class NetworkUtils implements INetworkUtils{
         SetInt closed = new SetInt(size);
         SetInt open = new SetInt(size);
         ListInt ls = new ListInt(size);
+        int whileCount = 0;
 
         for (int i = 0; i < size; i++) {
             open.include(i);
@@ -167,6 +170,7 @@ public class NetworkUtils implements INetworkUtils{
         }
         nodes[startIndex].g = 0;
         while (!closed.contains(endIndex)) {
+            whileCount++;
             int index = -1;
             double x = network.NO_LINK;
             int count = -1;
@@ -207,7 +211,7 @@ public class NetworkUtils implements INetworkUtils{
         for (int k = j; k >= 0; k--) {
             ls.append(list[k]);
         }
-
+        System.out.println("While loop iterations: " + whileCount);
         return ls;
     }
 }

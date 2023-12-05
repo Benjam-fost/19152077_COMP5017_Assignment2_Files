@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Part B ongoing&#10;Must implement A* algorithm then include updated main class.&#10;Must test existing NetworkUtils.">
-      <change afterPath="$PROJECT_DIR$/src/MyNetwork.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comp5017_CW2/COMP50172023CV2.java" afterDir="false" />
+    <list default="true" id="9e94d165-8aba-4dcd-8fe7-44fd62181afd" name="Changes" comment="Functional Program + NetworkUtils&#10;Requires further testing of pathfinding">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp5017_CW2/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/Network.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp5017_CW2/NetworkUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp5017_CW2/NetworkUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +98,7 @@
       <workItem from="1701274092211" duration="14303000" />
       <workItem from="1701462149634" duration="9692000" />
       <workItem from="1701614539095" duration="23391000" />
-      <workItem from="1701705191281" duration="28031000" />
+      <workItem from="1701705191281" duration="31835000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Files">
       <created>1700417010232</created>
@@ -157,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701659246152</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Functional Program + NetworkUtils&#10;Requires further testing of pathfinding">
+      <option name="closed" value="true" />
+      <created>1701793075087</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701793075087</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +188,8 @@
     <MESSAGE value="V3 Part A finished with testing functionality&#10;Deleted unneeded local variable in remove()" />
     <MESSAGE value="Part B started&#10;Implemented IStationInfo, StationInfo and Network" />
     <MESSAGE value="Part B ongoing&#10;Must implement A* algorithm then include updated main class.&#10;Must test existing NetworkUtils." />
-    <option name="LAST_COMMIT_MESSAGE" value="Part B ongoing&#10;Must implement A* algorithm then include updated main class.&#10;Must test existing NetworkUtils." />
+    <MESSAGE value="Functional Program + NetworkUtils&#10;Requires further testing of pathfinding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functional Program + NetworkUtils&#10;Requires further testing of pathfinding" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
