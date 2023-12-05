@@ -1,9 +1,5 @@
 package comp5017_CW2;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-
 public class NetworkUtils implements INetworkUtils{
     /**
      * @param network -- the network
@@ -70,12 +66,13 @@ public class NetworkUtils implements INetworkUtils{
      */
     @Override
     public ListInt dijkstraPath(Network network, int startIndex, int endIndex) {
+        assert network != null && startIndex != endIndex : "Invalid argument";
         class Node {
             double g;
-            Node back;
+            int back;
             public Node() {
                 g = network.NO_LINK;
-                back = null;
+                back = -1;
             }
         }
         int size = network.getNumStations();
@@ -83,8 +80,6 @@ public class NetworkUtils implements INetworkUtils{
         SetInt closed = new SetInt(size);
         SetInt open = new SetInt(size);
         ListInt ls = new ListInt(size);
-        double value = Double.MIN_VALUE;
-        int index = -1;
 
         for (int i = 0; i < size; i++) {
             open.include(i);
@@ -92,12 +87,17 @@ public class NetworkUtils implements INetworkUtils{
         }
         nodes[startIndex].g = 0;
         while (!closed.contains(endIndex)) {
+            int index = -1;
+            double x = network.NO_LINK;
+            int count = -1;
             for (int i : open.set) {
-                if (nodes[i].g > value) {
-                    value = nodes[i].g;
+                count++;
+                if (count < open.getSize() && nodes[i].g != network.NO_LINK && nodes[i].g < x) {
+                    x = nodes[i].g;
                     index = i;
                 }
             }
+            assert index != -1 : "Lowest g-value node not found";
             open.exclude(index);
             closed.include(index);
 
@@ -108,18 +108,24 @@ public class NetworkUtils implements INetworkUtils{
                         double sum = nodes[index].g + distance;
                         if (sum < nodes[n].g) {
                             nodes[n].g = sum;
-                            nodes[n].back = nodes[index];
+                            nodes[n].back = index;
                         }
                     }
                 }
             }
         }
-        int i = endIndex;
+        int i = endIndex, j = 0;
+        int[] list = new int[size];
         while (i != startIndex) {
-            ls.append(i);
-            i = Arrays.binarySearch(nodes, nodes[i].back);
+            list[j] = i;
+            j++;
+            i = nodes[i].back;
         }
-        ls.append(startIndex);
+        list[j] = startIndex;
+
+        for (int k = j; k >= 0; k--) {
+            ls.append(list[k]);
+        }
 
         return ls;
     }
@@ -135,6 +141,73 @@ public class NetworkUtils implements INetworkUtils{
      */
     @Override
     public ListInt aStarPath(Network network, int startIndex, int endIndex) {
-        return null;
+        class Node {
+            double g;
+            double f;
+            int back;
+            public Node() {
+                g = network.NO_LINK;
+                back = -1;
+            }
+        }
+        int size = network.getNumStations();
+        Node[] nodes = new Node[size];
+        SetInt closed = new SetInt(size);
+        SetInt open = new SetInt(size);
+        ListInt ls = new ListInt(size);
+
+        for (int i = 0; i < size; i++) {
+            open.include(i);
+            nodes[i] = new Node();
+            double x0 = network.getStationInfo(i).getxPos();
+            double y0 = network.getStationInfo(i).getyPos();
+            double x1 = network.getStationInfo(endIndex).getxPos();
+            double y1 = network.getStationInfo(endIndex).getyPos();
+            nodes[i].f = network.pythagoras(x0,y0,x1,y1);
+        }
+        nodes[startIndex].g = 0;
+        while (!closed.contains(endIndex)) {
+            int index = -1;
+            double x = network.NO_LINK;
+            int count = -1;
+            for (int i : open.set) {
+                count++;
+                if (count < open.getSize() && nodes[i].g != network.NO_LINK && nodes[i].f < x) {
+                    x = nodes[i].f;
+                    index = i;
+                }
+            }
+            assert index != -1 : "Lowest g-value node not found";
+            open.exclude(index);
+            closed.include(index);
+
+            if (index != endIndex) {
+                for (int n = 0; n != size; n++) {
+                    double distance = network.getDistance(n, index);
+                    if (distance != network.NO_LINK && open.contains(n)) {
+                        double sum = nodes[index].g + distance;
+                        if (sum < nodes[n].g) {
+                            nodes[n].g = sum;
+                            nodes[n].f += sum;
+                            nodes[n].back = index;
+                        }
+                    }
+                }
+            }
+        }
+        int i = endIndex, j = 0;
+        int[] list = new int[size];
+        while (i != startIndex) {
+            list[j] = i;
+            j++;
+            i = nodes[i].back;
+        }
+        list[j] = startIndex;
+
+        for (int k = j; k >= 0; k--) {
+            ls.append(list[k]);
+        }
+
+        return ls;
     }
 }

@@ -63,7 +63,7 @@ public class Network {
         return i;
     }
      
- private void readFileStream(FileInputStream fStream) throws IOException {
+ void readFileStream(FileInputStream fStream) throws IOException {
         Scanner scan = new Scanner(fStream);
         while (scan.hasNext()) {
             String word = scan.next();
